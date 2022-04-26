@@ -184,7 +184,9 @@ may cause a hazardous situation. AutoCast makes the ego vehicle aware of the col
 <h1 align="center">Qualitative Results</h1>
 <table border="0" cellspacing="10" cellpadding="0" align="center"> 
 <tbody><tr><td><left>
-For each evaluation scenario, we show both the results of AutoCast at high traffic density, as well as side-by-side comparisons to single-vehicle-based perception, using a simple planner leveraging A* search.
+For each evaluation scenario, we show both the results of AutoCast at high traffic density, as well as side-by-side comparisons to single-vehicle-based perception. 
+Without changing the planner, AutoCast enables the same planner to avoid crashes and make better informed decision, simply by providing more visibility using cooperative perception.
+Under high traffic density, AutoCast can still operate at over 10 Hz, prioritizing the most safety-critical objects for sharing.
 </left></td></tr></tbody>
 </table>
 
