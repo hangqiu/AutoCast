@@ -24,7 +24,7 @@ var _POPUP_FEATURES = 'width=500,height=300,resizable=1,scrollbars=1,titlebar=1,
 </script>
 <link media="all" href="./css/glab.css" type="text/css" rel="StyleSheet">
 
-<script src="./src/slideshow.js" type="text/javascript"></script>
+<script src="./scripts/slideshow.js" type="text/javascript"></script>
 <link media="all" href="./css/slideshow.css" type="text/css" rel="StyleSheet">
 
 <style type="text/css" media="all">
@@ -184,7 +184,7 @@ may cause a hazardous situation. AutoCast makes the ego vehicle aware of the col
 <h1 align="center">Qualitative Results</h1>
 <table border="0" cellspacing="10" cellpadding="0" align="center"> 
 <tbody><tr><td><left>
-Here we provide qualitative side-to-side comparisons using a simple planner leveraging A* search, given single-vehicle-based perception versus cooperative perception from AutoCast. Please click on the thumbnails to switch to a specific scenario.
+For each evaluation scenario, we show both the results of AutoCast at high traffic density, as well as side-by-side comparisons to single-vehicle-based perception, using a simple planner leveraging A* search.
 </left></td></tr></tbody>
 </table>
 
@@ -193,43 +193,46 @@ Here we provide qualitative side-to-side comparisons using a simple planner leve
 <!-- Container for the image gallery -->
 <div class="container" align="center">
 
-  <!-- Thumbnail images -->
-  <div class="row" style="width:1020">
-    <div class="column">
-      <img class="demo cursor" src="src/thumbnail6-v2.png" style="width:100%" onclick="currentSlide(1)" alt="<b>Scenario 6: Overtaking.</b>
-      The controlled ego car will make a lane-change maneuver at the two-way yellow-dashed road when a truck is stuck in front of it. Our model avoids collisions by acting less aggressively and appropriately yielding to the opposite-going vehicles.">
-    </div>
-    
-    <div class="column">
-      <img class="demo cursor" src="src/thumbnail8-v2.png" style="width:100%" onclick="currentSlide(2)" alt="<b>Scenario 8: Left Turn.</b>
-      The red car is going straight in the opposite direction, occluded behind the orange truck. Our model avoids the collisions by properly yielding to the red car before left-turning, even with the partially observable situation.">
-    </div>
-    
-    <div class="column">
-      <img class="demo cursor" src="src/thumbnail10-v2.png" style="width:100%" onclick="currentSlide(3)" alt="<b>Scenario 10: Red Light Violation.</b>
-      The controlled vehicle is going straight to pass an intersection on green lights. Coopernaut identifies the abnormal behaviors of the collider(red car) and proactively hard brakes to avoid the potential collision.">
-    </div>
-  </div>
-
   <!-- Full-width images with number text -->
   <div class="mySlides">
-    <div class="numbertext">1 / 3</div>
-    <video muted autoplay loop width="1020" controls>
-    <source src="./src/qualitative6-v9.mp4" type="video/mp4">
+    <div class="numbertext">1 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_Overtake_DeepDive.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 3</div>
-    <video muted autoplay loop width="1020" controls>
-    <source src="./src/qualitative8-v9.mp4" type="video/mp4">
+    <div class="numbertext">2 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_Overtake_AtScale.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 3</div>
-    <video muted autoplay loop width="1020" controls>
-    <source src="./src/qualitative10-v9.mp4" type="video/mp4">
+    <div class="numbertext">3 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_LeftTurn_DeepDive.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_LeftTurn_AtScale.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_Redlight_DeepDive.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <video muted autoplay loop width="1000" controls>
+    <source src="./media/AutoCast_Redlight_AtScale.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -238,9 +241,26 @@ Here we provide qualitative side-to-side comparisons using a simple planner leve
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-  <!-- Image text -->
-  <div class="caption-container" style="width:1020">
-    <p id="caption"></p>
+<!-- Thumbnail images -->
+  <div class="row" style="width:1000">
+    <div class="column">
+      <img class="demo cursor" src="media/overtake_bev.png" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div> 
+    <div class="column">
+      <img class="demo cursor" src="media/overtake_lidar.png" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+          <img class="demo cursor" src="media/left_turn_bev.png" style="width:100%" onclick="currentSlide(3)" alt="">
+        </div>
+    <div class="column">
+          <img class="demo cursor" src="media/left_turn_lidar.png" style="width:100%" onclick="currentSlide(4)" alt="">
+        </div>
+    <div class="column">
+          <img class="demo cursor" src="media/redlight_bev.png" style="width:100%" onclick="currentSlide(5)" alt="">
+        </div>
+    <div class="column">
+          <img class="demo cursor" src="media/redlight_lidar.png" style="width:100%" onclick="currentSlide(6)" alt="">
+    </div>
   </div>
 
 </div>
