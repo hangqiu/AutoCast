@@ -1,0 +1,3 @@
+[submodule "AutoCastSim"]
+	path = AutoCastSim
+	url = git@github.com:hangqiu/AutoCastSim
