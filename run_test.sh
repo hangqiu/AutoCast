@@ -1,7 +1,10 @@
 #!/bin/bash
-echo -n "Enter Scenario No. [6,8,10, test]: "
+echo "\nAutoCast Test Runner\n"
+echo -n "Specify scenario [6,8,10,test]: "
 read SCEN
-echo -n "Enter Port: "
+echo -n "Specify CARLA RPC host: "
+read CARLAHOST
+echo -n "Specify CARLA RPC port: "
 read PORT
 
 TMPORT=$(($PORT+50))
@@ -30,6 +33,7 @@ python3 scenario_runner.py \
     --eval $EGOSPD $EGODIST $COLSPD $COLDIST $COLACCELDIST \
     --bgtraffic $BGTRAFFIC \
     --port $PORT \
+    --host $CARLAHOST \
     --trafficManagerPort $TMPORT \
     --mqttport $MQTTPORT \
     --outputdir $OUTPUTDIR
@@ -63,6 +67,7 @@ python3 scenario_runner.py \
     --eval $EGOSPD $EGODIST $COLSPD $COLDIST $COLACCELDIST \
     --bgtraffic $BGTRAFFIC \
     --port $PORT \
+    --host $CARLAHOST \
     --trafficManagerPort $TMPORT \
     --mqttport $MQTTPORT \
     --outputdir $OUTPUTDIR
@@ -81,6 +86,7 @@ python3 scenario_runner.py \
     --eval $EGOSPD $EGODIST $COLSPD $COLDIST $COLACCELDIST \
     --bgtraffic $BGTRAFFIC \
     --port $PORT \
+    --host $CARLAHOST \
     --trafficManagerPort $TMPORT \
     --mqttport $MQTTPORT \
     --outputdir $OUTPUTDIR \
@@ -115,6 +121,7 @@ python3 scenario_runner.py \
     --eval $EGOSPD $EGODIST $COLSPD $COLDIST $COLACCELDIST \
     --bgtraffic $BGTRAFFIC \
     --port $PORT \
+    --host $CARLAHOST \
     --trafficManagerPort $TMPORT \
     --mqttport $MQTTPORT \
     --outputdir $OUTPUTDIR
