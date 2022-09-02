@@ -41,7 +41,7 @@ Installing dependencies and config paths
 ```bash
 apt-get install mosquitto libopenblas-dev
 apt remove python3-networkx
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 export SIM_ROOT=${PWD}/AutoCastSim
 export SCENARIO_RUNNER_ROOT=${PWD}/AutoCastSim/srunner
 export PYTHONPATH=${PYTHONPATH}:${SCENARIO_RUNNER_ROOT}:${SIM_ROOT}
