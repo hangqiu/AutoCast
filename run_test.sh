@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "\nAutoCast Test Runner\n"
+printf "\nAutoCast Test Runner\n\n"
 echo -n "Specify scenario [6,8,10,test]: "
 read SCEN
 echo -n "Specify CARLA RPC host: "
