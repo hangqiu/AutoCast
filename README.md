@@ -22,9 +22,11 @@ optimally schedules transmissions in a scalable and distributed fashion.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6502335.svg)](https://doi.org/10.5281/zenodo.6502335)
 
+## Getting Started - Container Installation
+An easy way to start is to use our containerized image. See [the AutoCastContainer repository](https://github.com/enp6s0/AutoCastContainer) for more details on how to get this up and running using `Docker` and `nvidia-container-toolkit`.
 
+## Getting Started - Native Installation
 
-## Getting Started
 ### Prerequisites
 Ubuntu 20.04, Cuda 11.0, PyTorch == 1.7.1, PyTorch Geometrics, [Carla 0.9.11](https://carla.readthedocs.io/en/0.9.11/start_quickstart/),
 [Minkowski Engine](https://github.com/NVIDIA/MinkowskiEngine) (CPU version is sufficient)
